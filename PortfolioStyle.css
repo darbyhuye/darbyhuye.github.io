@@ -1,0 +1,15 @@
+html {
+    font-family: "Arial";
+    font-size: 20pt;
+    background-color: LightGreen;
+    border: 1px black solid;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-decoration: pint wavy underline;
+}
+
