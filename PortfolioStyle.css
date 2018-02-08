@@ -32,6 +32,10 @@ h3 {
     font-size: 15pt;
 }
 
+#index_header {
+    text-align: center;
+}
+
 html {
     background-color: #FDF0D8;
     border-width: 20px;
