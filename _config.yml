@@ -26,7 +26,7 @@ footer-links:
   flickr:
   github: darbyhuye
   instagram:
-  linkedin: 
+  linkedin: darbyhuye
   pinterest:
   rss: rss
   twitter: 
@@ -89,7 +89,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
 
-include: ['_pages']
+include: ['_pages', '_posts']
 
 paginate: 6
 paginate_path: /page:num/
