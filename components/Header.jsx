@@ -8,8 +8,8 @@ import { useTheme } from 'next-themes'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { Container } from '@/components/Container'
-import avatarImage from '@/images/avatar.jpg'
+import { Container } from './Container'
+import avatarImage from '@/public/avatar.jpg'
 
 function CloseIcon(props) {
   return (
@@ -222,7 +222,8 @@ function Avatar({ large = false, className, ...props }) {
       <Image
         src={avatarImage}
         alt=""
-        sizes={large ? '4rem' : '2.25rem'}
+        width={large ? 64 : 36}  // Assuming 1rem = 16px
+        height={large ? 64 : 36} // Assuming 1rem = 16px
         className={clsx(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
           large ? 'h-16 w-16' : 'h-9 w-9'

@@ -2,28 +2,37 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
-import { Button } from '@/components/Button'
-import { Card } from '@/components/Card'
-import { Container } from '@/components/Container'
+import { Button } from '../components/Button'
+import { Card } from '../components/Card'
+import { Container } from '../components/Container'
 import {
   GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
   EmailIcon,
-} from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import logoEmail from '@/images/logos/email-test.png'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+} from '../components/SocialIcons'
+import logoAirbnb from '@/public/logos/airbnb.svg'
+import logoFacebook from '@/public/logos/facebook.svg'
+import logoPlanetaria from '@/public/logos/planetaria.svg'
+import logoStarbucks from '@/public/logos/starbucks.svg'
+import logoEmail from '@/public/logos/email-test.png'
+import image1 from '@/public/photos/image-1.jpg'
+import image2 from '@/public/photos/image-2.jpg'
+import image3 from '@/public/photos/image-3.jpg'
+import image4 from '@/public/photos/image-4.jpg'
+import image5 from '@/public/photos/image-5.jpg'
 import { formatDate } from '@/lib/formatDate'
 import { getAllArticles } from '@/lib/getAllArticles'
+
+
+import { usePathname } from "next/navigation";
+
+function getRedirectPath(suffix) {
+  const path = usePathname();
+  const base = path.split("/")[1];
+  return `${base}/${suffix}`;
+}
 
 function MailIcon(props) {
   return (
@@ -148,7 +157,7 @@ function Resume() {
         dateTime: new Date().getFullYear(),
       },
     },
-        {
+    {
       company: 'Tufts University',
       title: 'Research Assistant',
       logo: logoFacebook,
@@ -166,6 +175,8 @@ function Resume() {
       end: '2019',
     },
   ]
+
+  const CVRedirectUrl = getRedirectPath('darby_huye_cv.pdf');
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
@@ -191,9 +202,8 @@ function Resume() {
               <dt className="sr-only">Date</dt>
               <dd
                 className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
+                aria-label={`${role.start.label ?? role.start} until ${role.end.label ?? role.end
+                  }`}
               >
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
@@ -207,7 +217,7 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="https://darbyhuye.github.io/darby_huye_cv.pdf" variant="secondary" className="group mt-6 w-full">
+      <Button href={CVRedirectUrl} variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -243,7 +253,7 @@ function Photos() {
 }
 
 export default async function Home() {
-  let articles = (await getAllArticles()).slice(0, 4)
+  let articles = (await getAllArticles()).slice(0, 4);
 
   return (
     <>
@@ -253,7 +263,7 @@ export default async function Home() {
             Researcher, working to increase visibility in the cloud.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Darby, a Ph.D. Candidate at Tufts University. My research is centered on observability in distributed systems, specifically for performance debugging. Feel free to read more about my <a href='https://darbyhuye.github.io/about' style={{ color: '#3f57a1' }}>research interests</a> or my <a href='https://darbyhuye.github.io/projects' style={{ color: '#3f57a1' }}>past publications</a>. I'd love to connect over <a href="mailto:darby.huye@tufts.edu" style={{ color: '#3f57a1' }}>email</a>!</p>
+            I’m Darby, a Ph.D. Candidate at Tufts University. My research is centered on observability in distributed systems, specifically for performance debugging. Feel free to read more about my <a href='/about' style={{ color: '#3f57a1' }}>research interests</a> or my <a href='/projects' style={{ color: '#3f57a1' }}>past publications</a>. I'd love to connect over <a href="mailto:darby.huye@tufts.edu" style={{ color: '#3f57a1' }}>email</a>!</p>
           <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://github.com/darbyhuye"
@@ -281,11 +291,11 @@ export default async function Home() {
             {/* {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))} */}
-          {/* </div> */}
-          {/* <div className="space-y-10 lg:pl-16 xl:pl-24"> */}
-            {/* <Newsletter /> */}
-            {/* <Resume /> */}
-          {/* </div> 
+      {/* </div> */}
+      {/* <div className="space-y-10 lg:pl-16 xl:pl-24"> */}
+      {/* <Newsletter /> */}
+      {/* <Resume /> */}
+      {/* </div> 
         </div>
       </Container> */}
     </>
