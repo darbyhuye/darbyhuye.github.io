@@ -9,4 +9,5 @@ node_modules
 package.json
 *.gem
 *.gemspec
+*.next*
 .jekyll-cache
