@@ -17,5 +17,5 @@ const withMDX = nextMDX({
 
 export default withMDX({
   ...nextConfig,
-  basePath: '/darbyhuye.github.io'
+  basePath: ''
 });

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
-import { Card } from '@/components/Card'
-import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/writing.png'
+import { Card } from '../../components/Card'
+import { SimpleLayout } from '../../components/SimpleLayout'
 
+import logoAnimaginary from '@/public/logos/writing.png'
 const projects = [
   {
     name: 'Lifting the veil on Meta’s microservice architecture: Analyses of topology and request workflows',
@@ -60,6 +60,8 @@ export default function Projects() {
               <Image
                 src={project.logo}
                 alt=""
+                width={32}  // Assuming the width corresponds to 'w-8' in Tailwind CSS
+                height={32} // Assuming the height corresponds to 'h-8' in Tailwind CSS
                 className="h-8 w-8"
                 unoptimized
               />
