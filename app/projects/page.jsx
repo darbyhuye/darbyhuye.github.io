@@ -6,6 +6,13 @@ import { SimpleLayout } from '../../components/SimpleLayout'
 import logoAnimaginary from '@/public/logos/writing.png'
 const projects = [
   {
+    name: 'Systemizing and Mitigating Topological Inconsistencies in Alibaba’s Microservice Call-graph Datasets',
+    description:
+      'Darby Huye, Lan Liu, Raja R. Sambasivan (ICPE 2024)',
+    link: { href: 'https://darbyhuye.github.io/papers/huye_icpe24.pdf', label: 'paper' },
+    logo: logoAnimaginary,
+  },
+  {
     name: 'Lifting the veil on Meta’s microservice architecture: Analyses of topology and request workflows',
     description:
       'Darby Huye, Yuri Shkuro, Raja R. Sambasivan (ATC 2023)',
