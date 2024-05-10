@@ -9,16 +9,14 @@ const projects = [
     name: 'Systemizing and Mitigating Topological Inconsistencies in Alibaba’s Microservice Call-graph Datasets',
     description:
       'Darby Huye, Lan Liu, Raja R. Sambasivan (ICPE 2024)',
-    link: { href: 'https://darbyhuye.github.io/papers/huye_icpe24.pdf', label: 'paper' },
-    link: { href: 'https://darbyhuye.github.io/papers/dhuye_icpe.pdf', label: 'slides' },
+    link: { href: 'https://darbyhuye.github.io/papers/huye_icpe24.pdf', label: 'paper', href: 'https://darbyhuye.github.io/papers/dhuye_icpe.pdf', label: 'slides' },
     logo: logoAnimaginary,
   },
   {
     name: 'Lifting the veil on Meta’s microservice architecture: Analyses of topology and request workflows',
     description:
       'Darby Huye, Yuri Shkuro, Raja R. Sambasivan (ATC 2023)',
-    link: { href: 'https://www.usenix.org/system/files/atc23-huye.pdf', label: 'paper' },
-    link: { href: 'https://darbyhuye.github.io/papers/dhuye_atc.pdf', label: 'slides' },
+    link: { href: 'https://www.usenix.org/system/files/atc23-huye.pdf', label: 'paper', href: 'https://darbyhuye.github.io/papers/dhuye_atc.pdf', label: 'slides' },
     logo: logoAnimaginary,
   },
   {
