@@ -6,6 +6,13 @@ import { SimpleLayout } from '../../components/SimpleLayout'
 import logoAnimaginary from '@/public/logos/writing.png'
 const projects = [
   {
+    name: 'Characterizing Microservices and Accommodating Tracing Observability Loss',
+    description:
+      'Darby Huye (Dissertation, 2026)',
+    link: { href: 'https://darbyhuye.github.io/papers/dhuye_thesis.pdf', label: 'paper' },
+    logo: logoAnimaginary,
+  },
+  {
     name: 'Systemizing and Mitigating Topological Inconsistencies in Alibaba’s Microservice Call-graph Datasets',
     description:
       'Darby Huye, Lan Liu, Raja R. Sambasivan (ICPE 2024)',
