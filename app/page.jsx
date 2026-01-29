@@ -25,15 +25,6 @@ import image5 from '@/public/photos/image-5.jpg'
 import { formatDate } from '@/lib/formatDate'
 import { getAllArticles } from '@/lib/getAllArticles'
 
-
-import { usePathname } from "next/navigation";
-
-function getRedirectPath(suffix) {
-  const path = usePathname();
-  const base = path.split("/")[1];
-  return `${base}/${suffix}`;
-}
-
 function MailIcon(props) {
   return (
     <svg
