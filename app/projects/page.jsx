@@ -6,6 +6,27 @@ import { SimpleLayout } from '../../components/SimpleLayout'
 import logoAnimaginary from '@/public/logos/writing.png'
 const projects = [
   {
+    name: 'Characterizing Microservices and Accommodating Tracing Observability Loss',
+    description:
+      'Darby Huye (Dissertation)',
+    link: { href: 'https://darbyhuye.github.io/papers/dhuye_thesis.pdf', label: 'paper' },
+    logo: logoAnimaginary,
+  },
+  {
+    name: 'Bridges as a primitive for accommodating data loss in distributed tracing',
+    description:
+      'Tomislav Zabcic-Matic, Darby Huye, Ha Nguyen, Raja R. Sambasivan (Under Review at SOCC 2026)',
+    link: { href: '', label: 'paper' },
+    logo: logoAnimaginary,
+  },
+  {
+    name: 'Dynamic read & write optimization with TurtleKV',
+    description:
+      'Tony Astolfi, Vidya Silai, Darby Huye, Lan Liu, Raja R. Sambasivan, Johes Bater (Accepted at VLDB 2026)',
+    link: { href: 'https://arxiv.org/pdf/2509.10714', label: 'paper' },
+    logo: logoAnimaginary,
+  },
+  {
     name: 'Systemizing and Mitigating Topological Inconsistencies in Alibaba’s Microservice Call-graph Datasets',
     description:
       'Darby Huye, Lan Liu, Raja R. Sambasivan (ICPE 2024)',
