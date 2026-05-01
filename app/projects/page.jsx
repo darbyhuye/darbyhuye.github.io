@@ -9,14 +9,14 @@ const projects = [
     name: 'Characterizing Microservices and Accommodating Tracing Observability Loss',
     description:
       'Darby Huye (Dissertation)',
-    link: { href: 'https://darbyhuye.github.io/papers/dhuye_thesis.pdf', label: 'paper' },
+    link: { href: 'https://darbyhuye.github.io/papers/dhuye_thesis.pdf', label: 'Dissertation' },
     logo: logoAnimaginary,
   },
   {
     name: 'Bridges as a primitive for accommodating data loss in distributed tracing',
     description:
       'Tomislav Zabcic-Matic, Darby Huye, Ha Nguyen, Raja R. Sambasivan (Under Review at SOCC 2026)',
-    link: { href: '', label: 'paper' },
+    link: { href: '', label: 'link coming soon' },
     logo: logoAnimaginary,
   },
   {

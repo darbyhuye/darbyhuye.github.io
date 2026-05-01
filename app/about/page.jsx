@@ -56,18 +56,19 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I’m Darby Huye. I live in Boston, where I research observability in the cloud.
+            I’m Darby Huye. I live in Boston, where I research observability in the cloud. I'm currently open to new opportunities! 
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I'm a third year Ph.D. Candidate in the <a href='https://docclab.cs.tufts.edu/index.html' style={{ color: '#3f57a1' }}>D.O.C.C. Lab</a> at Tufts University studying under the guidance of <a href="https://raja.cs.tufts.edu/" style={{ color: '#3f57a1' }}> Professor Raja Sambasivan</a>. My research interests involve leveraging distributed tracing for debugging performance problems in cloud-based systems.
+              I'm graduating with my PhD from Tufts University in May 2026. I researched in the <a href='https://docclab.cs.tufts.edu/index.html' style={{ color: '#3f57a1' }}>D.O.C.C. Lab</a> at Tufts studying under the guidance of <a href="https://raja.cs.tufts.edu/" style={{ color: '#3f57a1' }}> Professor Raja Sambasivan</a>. My research interests involve leveraging distributed tracing for debugging performance problems in cloud-based systems.
             </p>
             <p>The first portion of my Ph.D. research was centered on understanding the buzzword <i>microservices</i>. I (along with my colleagues) conducted a user-study interviewing folks in industry and academia about their experiences with microservice-based applications. We found that the assumptions around this buzzword and the open-source academic testbed applications are far too limited to enable robust research in this space. This lead me to an internship at Meta, where I had the opportunity to analyze aspects of their microservice applications. My findings were published at ATC '23 and a portion of the data was released on <a href='https://github.com/facebookresearch/distributed_traces' style={{ color: '#3f57a1' }}>github</a>.</p>
-            <p> I am working on chapter two of my Ph.D. which is investigating: 'how can we capture meaningful observability data in our systems?' Prior research in this space assumes perfect observability (or ignores the possibility of imperfect data), which is far from the reality at many large organizations. I plan to investigate how we can make decisions regarding the performance of a distributed system given imperfect tracing data.
+            <p> The second portion of my Ph.D. was investigating: 'how can we capture meaningful observability data in our systems?' Prior research in this space assumes perfect observability (or ignores the possibility of imperfect data), which is far from the reality at many large organizations. I investigated the degree to which data is imperfect in open source traces (from Alibaba, Meta, and Uber) and designed a new primitive to <i>bridge the gap</i> in traces when data is lost. 
             </p>
-            <p>
-              Beyond research, I try to spend most of my time outdoors hiking or kayaking. I also climb and dabble in sewing (peep some of my sewing projects <a href='https://www.instagram.com/darbysews/' style={{ color: '#3f57a1' }}>here</a>).
-            </p>
+            <p> I'm currently looking for new work opportunities! I'm interested in working in the observability space, particularly around agentic-ai systems, automating observability decisions for developers (e.g., what data should we collect, how we should collect it, how can we show our observability data is useful for our specific needs, etc.), and helping build new tools for developers to use in their daily workflows. Please reach out over email if you're interested in chatting. </p>
+            {/* <p>
+              Beyond research, I try to spend most of my time outdoors hiking or kayaking. I also climb and dabble in sewing (peep some of my sewing projects <a href='https://www.instagram.com/darbysews/' style={{ color: '#3f57a1' }}>here</a>). I'm currently looking for work.
+            </p> */}
           </div>
         </div>
         <div className="lg:pl-20">
@@ -79,11 +80,11 @@ export default function About() {
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:darby.huye@tufts.edu"
+              href="mailto:darbyhuye@gmail.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              darby.huye@tufts.edu
+              darbyhuye@gmail.com
             </SocialLink>
           </ul>
         </div>
